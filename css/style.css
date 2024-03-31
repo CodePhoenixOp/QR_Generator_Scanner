@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.container{
+    width: 100%;
+    max-width: 410px;
+    background: #fff;
+    border-radius: 7px;
+    padding: 15px 25px;
+    overflow: scroll;
+    box-shadow: 0 0 10px #fff;
+}
+
+button{
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+nav button{
+    width: calc(100% / 2 - 5px);
+    font-size: 1.2rem;
+    text-align: center;
+    height: 45px;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #ccc;
+    opacity: 0.5;
+}
+
+nav button.active{
+    border-bottom: 2px solid #08da02;
+    font-weight: 700;
+    color: #08da02;
+    opacity: 1;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+#back{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: -2;
+    object-fit: cover;
+}
+
+/*Generator*/
+.generator{
+    overflow: scroll;
+    height: 215px;
+    transition: height 0.2s;
+}
+
+.generator.active{
+    height: 555px;
+}
+
+.generator h1{
+    font-size: 21px;
+}
+
+.generator p{
+    color: #555;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.generator-form{
+    margin: 20px 0;
+}
+
+.generator-form.active{
+    margin-bottom: -20px;
+}
+
+.generator-form textarea{
+    width: 100%;
+    height: 55px;
+    border: none;
+    border-radius: 5px;
+    border: 1px solid #999;
+    font-size: 18px;
+    padding: 12px 15px;
+}
+
+.generator-form button{
+    width: 100%;
+    height: 55px;
+    background: #08da02;
+    color: #fff;
+    font-size: 17px;
+    margin-top: 20px;
+    transition: 0.3s;
+    display: none;
+}
+
+#dropdown{
+    width: 100%;
+    height: 55px;
+    border-radius: 5px;
+    border: 1px solid #999;
+    font-size: 18px;
+    padding: 12px 15px;
+    margin-top: 10px;
+    
+}
+
+.generator-form button:hover{
+    background: #159e15;
+}
+
+.generator-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 33px;
+    border: 2px dashed #555;
+    pointer-events: none;
+}
+
+.generator-image.active{
+    display: none;
+}
+
+.generator-btn{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.generator-btn.active{
+    display: none;
+}
+
+.generator-btn .btn-link{
+    background: transparent;
+    color: #111;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 500;
+    font-size: 0.8rem;
+    padding: 10px 10px 10px 0;
+    transition: 0.5s;
+}
+
+.generator-btn .btn-link:hover{
+    padding: 10px;
+    background: rgba(36, 113, 255, 0.1);
+}
+
+/*Scanner*/
+.scanner{
+    overflow: hidden;
+    height: 280px;
+    transition: 0.2s;
+}
+
+.scanner h1{
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.scanner h1 i{
+    font-size: x-large;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.scanner h1 .fa-camera{
+    color: #08da02;
+}
+
+.scanner h1 .fa-camera.inactive{
+    display: hidden;
+}
+
+.scanner h1 .fa-circle-stop{
+    color: crimson;
+    display: none;
+}
+
+.scanner-form{
+    height: 225px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px dashed #777;
+}
+
+.scanner-form img{
+    max-width: 180px;
+    display: none;
+}
+
+.scanner-form #reader{
+    width: 100%;
+    height: 225px;
+    display: none;
+}
+
+.scanner-form .content{
+    color: #08da02;
+}
+
+.scanner-form .content i{
+    font-size: 4rem;
+}
+
+.scanner-form .content p{
+    font-size: 1.2rem;
+    margin-top: 15px;
+}
+
+.scanner-details{
+    margin-top: 15px;
+}
+
+.scanner-details textarea{
+    color: #333;
+    width: 100%;
+    height: 150px;
+    padding: 10px 15px;
+    outline: none;
+    font-size: 16px;
+    resize: none;
+    border-radius: 5px;
+}
+
+.scanner-details .btn{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+
+}
+
+.scanner-details .btn button{
+    height: 50px;
+    width: calc(100% / 2 - 10px);
+    background: #08da02;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.scanner-details .btn button:hover{
+    background: #159e15;
+}
+
+.scanner.active1{
+    height: 530px;
+}
+
+.scanner.active{
+    height: 530px;
+}
+
+.scanner.active1 .scanner-form{
+    pointer-events: none;
+}
+
+.scanner-form.active-img img{
+    display: block;
+    align-self: center;
+}
+
+.scanner-form.active-img .content,
+.scanner-form.active-img #reader{
+    display: none;
+    
+}
+
+.scanner-form.active-video #reader{
+    display: block;
+    height: 270px;
+}
+
+.scanner-form.active-video .content,
+.scanner-form.active-video img{
+    display: none;
+}
+
+.scanner-details textarea.hide{
+    display: none;
+}
+
+.scanner-details .btn button.hide{
+    display: none;
+}
+
+.scanner-form.scanning{
+    border: none;
+    height: 270px;
+}

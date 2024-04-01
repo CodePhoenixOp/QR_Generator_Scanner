@@ -147,7 +147,7 @@ camera.addEventListener("click", ()=>{
           cameraId = devices[0].id;
         }
       }).catch(err => {
-        alert("Cant get cameras");
+        
       });
 
     // Declaring the scanner block.
